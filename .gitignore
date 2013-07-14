@@ -2,3 +2,7 @@
 Customfile
 .DS_Store
 custom-setup.sh
+/www/wp-cli/
+/www/wp/
+/www/pma
+phpMyAdmin*
