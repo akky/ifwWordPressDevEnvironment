@@ -21,7 +21,7 @@ It is inspired by [Varying Vagrant Vagrants](https://github.com/10up/varying-vag
 1. Add these records to your local machine's hosts file
     * `192.168.33.10  wp.dev`    
     * `192.168.33.10  pma.dev`    
-1. Visit `http://wp.dev/3.5.1` in your browser to load WordPress version 3.5.1. To load others versions, change the version in the URL to `3.1` / `3.2` / `3.3` / `3.4` / `3.5` or enter `http://wp.dev/trunk` to load the current WordPress beta version.
+1. Visit `http://wp.dev/3.5.2` in your browser to load WordPress version 3.5.2. To load others versions, change the version in the URL, like to `3.1` / `3.2` and so on or enter `http://wp.dev/trunk` to load the current WordPress beta version.
 1. A copy of phpMyAdmin will be available on `http://pma.dev/`
 
 ## Custom configuration
@@ -58,6 +58,7 @@ and place this line in `provision/custom-setup.sh` for automatically loading it 
 1. [WordPress 3.4](http://wordpress.org) `http://wp.dev/3.4`
 1. [WordPress 3.5](http://wordpress.org) `http://wp.dev/3.5`
 1. [WordPress 3.5.1](http://wordpress.org) `http://wp.dev/3.5.1`
+1. [WordPress 3.5.2](http://wordpress.org) `http://wp.dev/3.5.2`
 1. [WordPress trunk](http://core.svn.wordpress.org/trunk) `http://wp.dev/trunk`
 1. [phpmyadmin](http://www.phpmyadmin.net/) `http://pma.dev/` (Login with MySQL root credentials)
 

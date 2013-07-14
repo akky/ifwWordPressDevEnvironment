@@ -7,9 +7,14 @@ versions_to_create=(
     3.4
     3.5
     3.5.1
+    3.5.2
 )
 
-mkdir -p /var/www/wp
+if [ ! -d /var/www/wp ]; then
+    mkdir -p /var/www/wp
+fi
+
+cd /var/www/wp
 
 mysqlUser="root"
 mysqlPassword="blank"
@@ -17,6 +22,13 @@ mysqlCmd="mysql -u $mysqlUser -p$mysqlPassword -B -N"
 
 echo "Installing WordPress environment"
 echo ""
+
+if [ ! -f /var/www/wp/info.php ]; then
+cat > info.php << EOF
+<?php
+phpinfo();
+EOF
+fi
 
 for version in ${versions_to_create[@]}
 do
