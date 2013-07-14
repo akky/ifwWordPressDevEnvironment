@@ -12,7 +12,7 @@ It is inspired by [Varying Vagrant Vagrants](https://github.com/10up/varying-vag
 1. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 1. Install [Vagrant](http://downloads.vagrantup.com/)
 1. Clone this repository into a local directory
-    * `git clone git://github.com/ifeelweb/ifwWordPressDevEnvironment.git wp-dev-local`
+    * `git clone https://github.com/ifeelweb/ifwWordPressDevEnvironment.git wp-dev-local`
 1. Change into the new directory
     * `cd wp-dev-local`
 1. Start the Vagrant environment
