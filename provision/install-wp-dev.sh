@@ -8,6 +8,7 @@ versions_to_create=(
     3.5
     3.5.1
     3.5.2
+    3.6
 )
 
 if [ ! -d /var/www/wp ]; then
