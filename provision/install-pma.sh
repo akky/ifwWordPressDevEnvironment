@@ -1,4 +1,3 @@
-
 pma_version="3.5.8.1"
 pma_filename="phpMyAdmin-$pma_version-all-languages"
 
@@ -8,7 +7,7 @@ if [ ! -d "$pma_filename" ]; then
     echo "Installing phpMyAdmin"
     echo "Downloading version $pma_version..."
     wget -q http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/$pma_version/$pma_filename.tar.bz2
-    echo "Exctracting package"
+    echo "Extracting package"
     tar xf $pma_filename.tar.bz2
     rm $pma_filename.tar.bz2
     echo "Done."
