@@ -22,6 +22,14 @@ Vagrant.configure("2") do |config|
   # using a specific IP.
   config.vm.network :private_network, ip: "192.168.33.10"
 
+  config.vm.hostname = "wp.dev"
+ 
+  # To auto update your hosts file please install Vagrant plugin HostsUpdater:
+  # https://github.com/cogitatio/vagrant-hostsupdater
+  if defined? VagrantPlugins::HostsUpdater
+    config.hostsupdater.aliases = ["pma.dev"]
+  end
+
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
