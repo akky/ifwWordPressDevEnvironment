@@ -61,6 +61,9 @@ bash /vagrant/provision/install-wp-trunk.sh
 # install phpMyAdmin
 bash /vagrant/provision/install-pma.sh
 
+# install Jenkins
+#bash /vagrant/provision/install-pma.sh
+
 if [ -f /vagrant/provision/custom-setup.sh ]; then
     bash /vagrant/provision/custom-setup.sh
 fi
