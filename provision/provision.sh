@@ -9,6 +9,8 @@ sudo apt-get -y install mysql-server
 
 sudo apt-get -y install php5
 
+sudo apt-get -y install php5-intl
+
 sudo apt-get -y install libapache2-mod-php5
 sudo apt-get -y install php5-mysql
 
@@ -19,6 +21,7 @@ sudo apt-get -y install unzip
 sudo apt-get -y install subversion
 sudo apt-get -y install git
 sudo apt-get -y install vim
+
 
 # activate mod_rewrite
 if [ ! -L /etc/apache2/mods-enabled/rewrite.load ]; then

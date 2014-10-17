@@ -1,4 +1,4 @@
-pma_version="3.5.8.1"
+pma_version="4.2.10"
 pma_filename="phpMyAdmin-$pma_version-all-languages"
 
 cd /var/www
