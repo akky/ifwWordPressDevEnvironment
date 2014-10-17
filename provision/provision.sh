@@ -10,6 +10,9 @@ sudo apt-get -y install mysql-server
 sudo apt-get -y install php5
 
 sudo apt-get -y install php5-intl
+sudo apt-get -y install php5-curl
+sudo apt-get -y install php5-gd
+sudo apt-get -y install php5-mbstring
 
 sudo apt-get -y install libapache2-mod-php5
 sudo apt-get -y install php5-mysql
