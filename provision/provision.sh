@@ -1,7 +1,7 @@
 sudo apt-get update
 
 sudo apt-get -y install apache2
-sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/conf.d/name'
+sudo sh -c 'echo "ServerName localhost" >> /etc/apache2/conf-available/name'
 
 echo mysql-server-5.5 mysql-server/root_password password blank | sudo debconf-set-selections
 echo mysql-server-5.5 mysql-server/root_password_again password blank | sudo debconf-set-selections
@@ -33,10 +33,10 @@ fi
 
 # load vhosts
 if [ ! -L /etc/apache2/sites-enabled/wp ]; then
-    sudo ln -s /vagrant/sites-available/wp.vhost /etc/apache2/sites-enabled/wp
+    sudo ln -s /vagrant/sites-available/wp.vhost /etc/apache2/sites-enabled/wp.conf
 fi
 if [ ! -L /etc/apache2/sites-enabled/pma ]; then
-    sudo ln -s /vagrant/sites-available/pma.vhost /etc/apache2/sites-enabled/pma
+    sudo ln -s /vagrant/sites-available/pma.vhost /etc/apache2/sites-enabled/pma.conf
 fi
 
 # symlink www
@@ -62,7 +62,7 @@ bash /vagrant/provision/install-wp-trunk.sh
 bash /vagrant/provision/install-pma.sh
 
 # install Jenkins
-#bash /vagrant/provision/install-pma.sh
+#bash /vagrant/provision/install-jenkins.sh
 
 if [ -f /vagrant/provision/custom-setup.sh ]; then
     bash /vagrant/provision/custom-setup.sh
