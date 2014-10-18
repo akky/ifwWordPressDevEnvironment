@@ -12,8 +12,7 @@
         <Directory /var/www/pma/>
                 Options Indexes FollowSymLinks MultiViews
                 AllowOverride None
-                Order allow,deny
-                allow from all
+                Require all granted
         </Directory>
 
 </VirtualHost>
