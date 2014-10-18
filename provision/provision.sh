@@ -68,6 +68,8 @@ if [ -f /vagrant/provision/custom-setup.sh ]; then
     bash /vagrant/provision/custom-setup.sh
 fi
 
+# stop the default virtual host
+sudo a2dissite 000-default
 # finally restart/reload apache
 sudo service apache2 restart
 
