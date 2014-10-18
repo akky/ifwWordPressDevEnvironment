@@ -10,7 +10,7 @@ plugins_to_install=(
     backwpup
     display-php-version
     googleanalytics
-    google-anayltics-dashboard
+    google-analytics-dashboard
     google-sitemap-generator
     jetpack
     wordpress-importer
