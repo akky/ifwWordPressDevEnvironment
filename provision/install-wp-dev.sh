@@ -5,6 +5,19 @@ versions_to_create=(
     4.0
 )
 
+
+plugins_to_install=(
+    backwpup
+    display-php-version
+    googleanalytics
+    google-anayltics-dashboard
+    google-sitemap-generator
+    jetpack
+    wordpress-importer
+    wp-multibyte-patch
+    wp-super-cache
+)
+
 if [ ! -d /var/www/wp ]; then
     mkdir -p /var/www/wp
 fi
@@ -96,6 +109,12 @@ PHP
         if [ ! -L "wp-content" ]; then
             ln -s ../wp-content wp-content
         fi
+
+        echo "Installing plugins."
+		for plugin in ${plugins_to_install[@]}
+		do
+	        wp plugin install --allow-root --path=/var/www/wp/$version --activate $plugin
+		done
 
         echo "Done."
 

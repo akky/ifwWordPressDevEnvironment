@@ -16,12 +16,12 @@ then
     # this creates the user if it does not exist:
     $mysqlCmd -e "GRANT ALL PRIVILEGES ON $dbname.* TO 'wp'@'localhost' IDENTIFIED BY 'wp'"
 
-    wp core config --dbname=$dbname --dbuser=wp --dbpass=wp --extra-php <<PHP
+    wp core config --allow-root --path=/var/www/wp/trunk --dbname=$dbname --dbuser=wp --dbpass=wp --extra-php <<PHP
 define( "WP_DEBUG", true );
 define( "WP_DEBUG_LOG", true );
 PHP
 
-    wp core install --url=wp.dev/trunk --quiet --title="wp.dev trunk" --admin_name=admin --admin_email="admin@wp.dev" --admin_password="123"
+    wp core install --allow-root --path=/var/www/wp/trunk --url=wp.dev/trunk --quiet --title="wp.dev trunk" --admin_name=admin --admin_email="admin@wp.dev" --admin_password="123"
 
     if [ ! -d "./../wp-content" ]; then
         mkdir ./../wp-content
