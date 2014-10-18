@@ -63,12 +63,12 @@ do
         fi
 
         echo "Installing..."
-        wp core config --dbname=$dbname --dbuser=wp --dbpass=wp --extra-php <<PHP
+        wp core config --allow-root --path=/var/www/wp/$version --dbname=$dbname --dbuser=wp --dbpass=wp --extra-php <<PHP
 define( "WP_DEBUG", true );
 define( "WP_DEBUG_LOG", true );
 PHP
         
-        wp core install --url=wp.dev/$version --quiet --title="wp.dev $version" --admin_name=admin --admin_email="admin@wp.dev" --admin_password="123"
+        wp core install --allow-root --path=/var/www/wp/$version --url=wp.dev/$version --quiet --title="wp.dev $version" --admin_name=admin --admin_email="admin@wp.dev" --admin_password="123"
 
         # if [ -f /vagrant/database/$dbname.sql ]
         # then
